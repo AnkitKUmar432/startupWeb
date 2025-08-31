@@ -1,0 +1,301 @@
+/* ============================
+   Global Styles (Responsive)
+============================= */
+html {
+  font-size: 100%; /* 16px = 1rem */
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* ============================
+   Navbar
+============================= */
+.container2 {
+  background-color: #000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(1rem, 3vw, 1.25rem) clamp(1.5rem, 5vw, 2rem);
+  background-color: #111;
+  border-bottom: 0.0625rem solid #333; /* 1px → rem */
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 2.5rem;   /* 40px → rem */
+  height: 2.5rem;
+  object-fit: cover;
+  border-radius: 0.375rem; /* 6px → rem */
+}
+
+.brand-name {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 600;
+  color: #0C8CE9;
+}
+
+.nav-btn a {
+  color: #f0f0f0;
+  margin-left: 0.75rem; /* 12px → rem */
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.nav-btn a:hover,
+.nav-btn .active {
+  color: #0C8CE9;
+  border-bottom: 0.125rem solid #0C8CE9; /* 2px → rem */
+}
+
+/* ============================
+   Main Container
+============================= */
+.about-container {
+  padding: clamp(2rem, 4vw, 4rem) clamp(1.5rem, 5vw, 2rem);
+  max-width: 68.75rem; /* 1100px → rem */
+  margin: auto;
+}
+
+/* ============================
+   Hero Section
+============================= */
+.about-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-hero h1 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.about-hero p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #ccc;
+}
+
+/* ============================
+   Mission & Vision Section
+============================= */
+.mission-vision {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr)); /* 280px → rem */
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.mission,
+.vision {
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  color: #e0e0e0;
+}
+
+.mission h2,
+.vision h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+/* ============================
+   Team Section
+============================= */
+.team-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.team-section h2 {
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr)); /* 200px → rem */
+  gap: 2rem;
+  justify-content: center;
+}
+
+.team-member {
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 0.75rem; /* 12px → rem */
+  text-align: center;
+}
+
+.team-member img {
+  width: 6.25rem;  /* 100px → rem */
+  height: 6.25rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.team-member h3 {
+  margin: 0.5rem 0;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.team-member p {
+  font-size: 0.95rem;
+  color: #bbb;
+}
+
+/* ============================
+   Call to Action
+============================= */
+.call-to-action {
+  background-color: #0C8CE9;
+  text-align: center;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+  border-radius: 0.75rem;
+  color: white;
+}
+
+.call-to-action h2 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin-bottom: 1rem;
+}
+
+.call-to-action p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.cta-btn {
+  margin-top: 1.5rem;
+  display: inline-block;
+  background-color: #fff;
+  color: #0C8CE9;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.3125rem; /* 5px → rem */
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* ============================
+   Footer
+============================= */
+.footer-detail {
+  background-color: #111;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr)); /* 250px → rem */
+  gap: 2rem;
+  padding: 3rem 2rem;
+  border-top: 0.0625rem solid #333; /* 1px → rem */
+}
+
+.footer-section {
+  font-size: 0.95rem;
+}
+
+.footer-heading {
+  color: #e8e2e2;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section > p > a {
+  text-decoration: none;
+  color: #928f8f;
+}
+
+.footer-section p,
+.footer-section span {
+  color: #747272;
+}
+
+.logo-container {
+  color: #e3dfdf;
+}
+
+.footer-image img {
+  width: 2.5rem;  /* 40px → rem */
+  height: 2.5rem;
+  object-fit: cover;
+  border-radius: 0.3125rem; /* 5px → rem */
+  margin-bottom: 0.5rem;
+}
+
+/* ============================
+   Bottom Link Section
+============================= */
+.link-section {
+  background-color: #0c0c0c;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-top: 0.0625rem solid #222;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.link-left span {
+  color: #0C8CE9;
+  font-weight: bold;
+}
+
+.link-right {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.link-right i {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.link-right i:hover {
+  color: #0C8CE9;
+}
+
+/* ============================
+   Responsive (Mobile)
+============================= */
+@media (max-width: 48rem) { /* 768px → rem */
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-btn {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .link-section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

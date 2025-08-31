@@ -1,0 +1,106 @@
+* {
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ===== Navbar ===== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  backdrop-filter: blur(0.7rem); /* ~11px */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.94rem 8%; /* 15px → 0.94rem */
+  box-shadow: 0 0.13rem 0.63rem rgba(0, 0, 0, 0.5); /* 2px → 0.13rem, 10px → 0.63rem */
+  z-index: 1000;
+}
+
+/* ===== Logo ===== */
+.logo {
+  font-size: 1.5rem; /* 24px */
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  color: #4f46e5;
+}
+
+/* ===== Nav Links ===== */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.88rem; /* 30px */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 1rem; /* 16px */
+  font-weight: 500;
+  color: #f1f1f1;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #4f46e5;
+  transform: translateY(-0.19rem) scale(1.05); /* -3px */
+}
+
+/* ===== Hamburger Menu ===== */
+.menu-btn {
+  display: none;
+  font-size: 1.75rem; /* 28px */
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.menu-btn.rotate {
+  transform: rotate(90deg);
+}
+
+/* ===== Mobile Menu ===== */
+@media (max-width: 48em) { /* 768px → 48em */
+  .nav-links {
+    position: absolute;
+    top: 3.8em; /* relative to font size */
+    right: -70%;
+    width: 30%;
+    height: 50vh; /* 50% of viewport height */
+    background: transparent;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translateY(-1.25rem); /* -20px → -1.25rem */
+    background-color: rgba(19, 19, 19, 0.84);
+    backdrop-filter: blur(1rem); /* 16px blur */
+    -webkit-backdrop-filter: blur(1rem);
+  }
+
+  .nav-links.active {
+    left: 0;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
